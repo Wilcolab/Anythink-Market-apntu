@@ -10,4 +10,24 @@ When implementing a new feature or fixing a bug, please create a new pull reques
 
 ## First setup
 
-**[TODO 05/01/2018 @vanessa-cooper]:** _It's been a while since anyone ran a fresh copy of this repo. I think it's worth documenting the steps needed to install and run the repo on a new machine?_
+**[TODO 05/01/2018 @vanessa-cooper]:** 
+
+- If you are reading then you most probably have a github account. If not, create an account to work further.
+- Now that you have an account, head over to your cli and cd over to the directory you wish to clone this repo.
+- Run the following command to clone this repo:
+
+`$ git clone https://github.com/ObelusFamily/Anythink-Market-apntu.git `
+
+- Next step is to [install docker](https://docs.docker.com/get-docker/).
+- You can verify docker is ready by running the following commands in your terminal: 
+`docker -v` and `docker-compose -v`.
+- Then, run docker-compose up from the project root directory to load Anythink's backend and frontend.
+- If Docker is working correctly, the backend should be running and able to connect to your local database.
+- Test this by pointing your browser to http://localhost:3000/api/ping 
+- The backend is up and running.
+- Now, it’s time to check the frontend and make sure it’s connected to the backend.
+- If everything is working properly, you’ll be able to create a new user on http://localhost:3001/register
+- Just make sure that you run all scripts in the next quests on one of the containers created by `docker-compose up`.  Also, you can use `docker exec` to run commands on a running container.
+
+
+
