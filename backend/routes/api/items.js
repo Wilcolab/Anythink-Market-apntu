@@ -183,7 +183,7 @@ router.put("/:item", auth.required, function(req, res, next) {
       }
 
       if (typeof req.body.item.image !== "undefined") {
-        req.item.image = req.body.item.image;
+        req.item.image = req.body.item.image.tiny_url;
       }
 
       if (typeof req.body.item.tagList !== "undefined") {
